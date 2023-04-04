@@ -10,22 +10,18 @@
 </head>
 <body>
     
-    <button>Watch</button>
+    <button "customplayer">Watch</button>
 
     <button id="exo">Watch Exo</button>
 
     <script>
         $(document).ready(function () {
-            $("button").click(function (e) { 
+            $("#customplayer").click(function (e) { 
                 e.preventDefault();
-                
-
                 window.Interface.playLink("https://linear-490.frequency.stream/dist/vix/490/hls/master/playlist_1280x720.m3u8",   ("https://dx4888.github.io/player/player.html?linko="+ "https://linear-490.frequency.stream/dist/vix/490/hls/master/playlist_1280x720.m3u8") ,   "",   "",   ""); 
             });
             $("#exo").click(function (e) { 
                 e.preventDefault();
-                
-
                 window.Interface.playLink("https://linear-490.frequency.stream/dist/vix/490/hls/master/playlist_1280x720.m3u8",   "exoplayer" ,   "",   "",   ""); 
             });
         });
