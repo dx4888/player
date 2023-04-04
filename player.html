@@ -12,7 +12,7 @@
 <body style='margin:0'>
     <div id="player" ></div>
     <script>
-
+        
         function playu(Linkm3u) {
             alert(Linkm3u);
             var player = new Clappr.Player({
@@ -29,8 +29,13 @@
             });
         }
         $(document).ready(function () {
-            window.Interface.playLink();
+           // window.Interface.playLink();
             // playu("https://a.jsrdn.com/broadcast/542cb2ce3c/+0000/c.m3u8")
+            const queryString = window.location.search;
+
+            const urlParams = new URLSearchParams(queryString);
+            var product = urlParams.get('liko')
+            playu(product);
         });
 
 
