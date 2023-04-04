@@ -14,7 +14,6 @@
     <script>
 
         function playu(Linkm3u) {
-            alert(Linkm3u);
             var player = new Clappr.Player({
                 source: Linkm3u,
                 parentId: "#player",
@@ -95,14 +94,8 @@
 
 
         $(document).ready(function () {
-            // window.Interface.playLink();
-            // playu("https://a.jsrdn.com/broadcast/542cb2ce3c/+0000/c.m3u8")
-
-
             playu(getAllUrlParams(window.location.href).linko);
         });
-
-
     </script>
 </body>
 
