@@ -19,7 +19,13 @@
     <div id="player"></div>
     <script>
         $(document).ready(function () {
-            window.Interface.playLink();
+            try {
+                window.Interface.playLink();
+            }
+            catch (e) {
+                console.log(e);
+            }
+
         });
         function play(m3ulink) {
             var player = new Clappr.Player({
